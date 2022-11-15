@@ -14,7 +14,7 @@ services:
       - demo-network
 
   php-fpm:
-    container_name: "php-fpm"
+    container_name: "demo_php-fpm"
     build: ./docker/php
     environment:
       PHP_IDE_CONFIG: serverName=php-fpm
@@ -28,7 +28,7 @@ services:
       - demo-network
 
   mariadb:
-    container_name: mariadb
+    container_name: demo_mariadb
     image: mariadb:latest
     ports:
       - ${MYSQL_PORT}:3306
